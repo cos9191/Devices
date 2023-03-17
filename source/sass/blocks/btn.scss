@@ -4,8 +4,9 @@
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-deep-sky-blue;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
 
   transition: opacity $trans-default;
@@ -20,7 +21,15 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  //@include hover-focus {
+  //  opacity: 0.8;
+  //}
+
+  @include hover {
     opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.3;
   }
 }

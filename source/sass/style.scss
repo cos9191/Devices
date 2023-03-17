@@ -25,8 +25,13 @@
 @import "blocks/custom-select";
 @import "blocks/data-accordion";
 @import "blocks/accordion";
+@import "blocks/contacts";
+@import "blocks/header";
+@import "blocks/hero";
 
 // ---------------------------------
+
+@import "global/visibility";
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
 
