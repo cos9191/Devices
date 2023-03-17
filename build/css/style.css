@@ -1465,7 +1465,7 @@ button,
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: "Roboto Condensed", "Courier New", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
 }
 .header__btn.focus-visible:active {
@@ -1542,7 +1542,7 @@ button,
 
 .hero h1 {
   margin: 0;
-  font-family: "Roboto Condensed", "Courier New", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
@@ -1585,7 +1585,7 @@ button,
   line-height: 21px;
   letter-spacing: 0.05em;
   padding: 15px 25px;
-  font-family: "Roboto Condensed", "Courier New", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
 }
 @media (max-width: 1023px) {
