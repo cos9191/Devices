@@ -1,30 +1,33 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
 .header {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: $blue-to-bottom;
-  color: $color-default-white;
+  background: v.$blue-to-bottom;
+  color: v.$color-default-white;
 
-  @include vp-1023 {
+  @include m.vp-1023 {
     position: static;
   }
 }
 
 .header__container {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding-top: 30px;
   min-height: 120px;
 
-  @include vp-1023 {
+  @include m.vp-1023 {
     min-height: 100px;
     padding-left: 50px;
     padding-top: 20px;
     padding-right: 70px;
   }
 
-  @include vp-374 {
+  @include m.vp-374 {
     min-height: 70px;
     padding-left: 26px;
     padding-top: 15px;
@@ -39,7 +42,7 @@
   width: 100%;
   place-content: center;
 
-  @include vp-1023 {
+  @include m.vp-1023 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -50,17 +53,13 @@
 .header__logo-link {
   align-self: center;
 
-  @include hover {
+  @include m.hover {
     opacity: 0.8;
-  }
-
-  @include active {
-    opacity: 0.3;
   }
 }
 
 .header__btn {
-  background-color: $color-transparent;
+  background-color: v.$color-transparent;
   padding: 10px 15px;
   border: 1px solid #f2f5f7;
   letter-spacing: 0.05em;
@@ -69,10 +68,6 @@
   height: fit-content;
   width: fit-content;
   align-self: center;
-  font-family: $ff-title;
+  font-family: v.$ff-title;
   font-weight: 700;
-
-  @include active {
-    opacity: 0.1;
-  }
 }

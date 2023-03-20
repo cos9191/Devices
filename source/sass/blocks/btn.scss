@@ -1,18 +1,21 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
 .btn {
   display: inline-flex;
   padding: 10px 20px;
 
-  color: $color-default-white;
+  color: v.$color-default-white;
 
-  background-color: $color-deep-sky-blue;
+  background-color: v.$color-deep-sky-blue;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition: opacity v.$trans-default;
 
   &--red {
-    background-color: $color-torch-red;
+    background-color: v.$color-torch-red;
   }
 
   &:disabled {
@@ -25,11 +28,11 @@
   //  opacity: 0.8;
   //}
 
-  @include hover {
+  @include m.hover {
     opacity: 0.8;
   }
 
-  @include active {
+  @include m.active {
     opacity: 0.3;
   }
 }
