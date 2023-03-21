@@ -1,0 +1,62 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.about__container {
+  padding: 60px 32px 100px;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(2, minmax(10px, auto));
+
+  @include m.vp-1023 {
+    padding: 20px 50px 80px;
+  }
+
+  @include m.vp-767 {
+    grid-template-columns: minmax(10px, 1fr);
+    max-width: 595px;
+    padding: 0 25px 80px;
+  }
+}
+
+.about__text h2 {
+  margin: 0;
+  font-family: v.$ff-title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: v.$color-black-pearl;
+}
+
+.about__text p {
+  margin: 15px 0 0;
+  font-family: v.$ff-text;
+  font-size: 16px;
+  line-height: 22px;
+  color: v.$color-black-pearl;
+  text-align: justify;
+}
+
+.about__text button {
+  margin: 20px 0 0;
+  background-color: v.$color-transparent;
+  color: v.$color-deep-sky-blue;
+  border: 1px solid v.$color-deep-sky-blue;
+  border-radius: 3px;
+  font-family: v.$ff-title;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  min-width: 180px;
+  min-height: 45px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+  @include m.vp-767 {
+    min-width: 160px;
+    min-height: 35px;
+  }
+}

@@ -1,0 +1,89 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.features__container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include m.vp-767 {
+    padding-bottom: 50px;
+  }
+}
+
+.features__list {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+  @include m.vp-767 {
+    grid-template-columns: minmax(10px, 1fr);
+    max-width: 595px;
+  }
+}
+
+.features__item {
+  min-height: 300px;
+  max-width: 595px;
+  padding: 40px 35px 45px;
+  user-select: none;
+  box-shadow: -5px 0 0 v.$color-deep-sky-blue;
+  border: 1px solid v.$color-features-border;
+  transition: background-color v.$trans-default,
+    border v.$trans-default,
+    color v.$trans-default;
+
+  @include m.hover {
+    background-color: v.$color-deep-sky-blue;
+    border: 1px solid v.$color-deep-sky-blue;
+  }
+
+  @include m.vp-1023 {
+    min-height: 360px;
+  }
+
+  @include m.vp-767 {
+    min-height: 325px;
+    padding: 30px 30px 35px;
+  }
+}
+
+.features__item svg {
+  color: v.$color-deep-sky-blue;
+}
+
+.features__item h2 {
+  margin: 20px 0 0;
+  color: v.$color-deep-sky-blue;
+  font-family: v.$ff-title;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+
+  @include m.vp-767 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.features__item p {
+  margin: 15px 0 0;
+  color: v.$color-black-pearl;
+  font-family: v.$ff-text;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include m.vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.features__item:hover h2,
+.features__item:hover svg,
+.features__item:hover p {
+  color: v.$color-alice-blue;
+}

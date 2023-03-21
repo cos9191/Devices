@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
+  <title>Smart Device</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание проекта">
-  <title>ProjectName</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Smart Device - умные технологии. Производство и монтаж печатных плат, поставка комплектующих, блоков и модулей.">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./img/favicons/browserconfig.xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicons/favicon.ico">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -113,6 +122,74 @@
       </div>
     </section>
 
+    <section class="features">
+      <div class="container features__container">
+        <ul class="features__list">
+          <li class="features__item">
+              <svg aria-hidden="true" focusable="false" width="35" height="35">
+                <use xlink:href="img/sprite.svg#features_time"/>
+              </svg>
+              <h2>Оперативные сроки</h2>
+              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
+          </li>
+          <li class="features__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use xlink:href="img/sprite.svg#features_suppliers"/>
+            </svg>
+            <h2>Крупные поставщики</h2>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="features__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use xlink:href="img/sprite.svg#features_privacy"/>
+            </svg>
+            <h2>Полная конфиденциальность</h2>
+            <p>По желанию клиента мы обеспечиваем полную конфиденциальность.</p>
+          </li>
+          <li class="features__item">
+            <svg aria-hidden="true" focusable="false" width="35" height="35">
+              <use xlink:href="img/sprite.svg#features_price"/>
+            </svg>
+            <h2>Персонализация стоимости</h2>
+            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container about__container" data-accordion="parent">
+        <div class="about__img visibility-desktop visibility-tablet">
+          <picture>
+            <source type="image/webp" srcset="img/about_2022.webp, img/about_2022@2x.webp 2x">
+            <img src="img/about_2022.png" srcset="img/about_2022@2x.png 2x" width="150" height="320" alt="2022.">
+          </picture>
+        </div>
+        <div class="about__text" data-accordion="element" data-spoiler="parent">
+          <h2>О компании</h2>
+          <p>
+            Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          </p>
+          <p class="visibility-tablet visibility-desktop">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+          </p>
+          <p class="visibility-mobile">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+          </p>
+          <div data-accordion="content">
+            <p class="visibility-mobile">
+              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+            </p>
+            <p>
+              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+            </p>
+          </div>
+          <button class="btn" type="button" data-accordion="button">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- удалить -->
     <section class="intro">
       <div class="container">
         <h1>Тестовая страница.</h1>
@@ -123,30 +200,6 @@
       </div>
     </section>
   </main>
-
-  <div class="container">
-    <h2 class="subtitle">Пример аккордеона с установленным data-destroy="(max-width: 767px)</h2>
-    <div class="accordion" data-accordion="parent" data-single="data-single" data-destroy="(max-width: 767px)">
-      <div class="accordion__element" data-accordion="element">
-        <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-        <div class="accordion__content" data-accordion="content">
-          <div class="accordion__wrapper">
-            <p>Lorem ipsum!</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion__element" data-accordion="element">
-        <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">
-          Открыть
-        </button>
-        <div class="accordion__content" data-accordion="content">
-          <div class="accordion__wrapper">
-            <p>Lorem ipsum!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Модалки -->
   <div class="modal modal--preload" data-modal="feedback">
@@ -214,10 +267,10 @@
         </ul>
       </div>
       <div class="footer__accordion" data-accordion="parent" data-single="data-single" data-destroy="(max-width: 767px)">
-        <div class="footer__column footer__column--accordion" data-accordion="element">
+        <div class="footer__column" data-accordion="element">
           <h2 class="footer__title" data-accordion="button">РАЗДЕЛЫ САЙТА</h2>
           <div class="footer__sections-wrapper" data-accordion="content">
-            <ul class="footer__list">
+            <ul class="footer__list footer__list--padding">
               <li class="footer__list-item">
                 <a class="footer__link" href="#">О Компании</a>
               </li>
@@ -246,7 +299,8 @@
         </div>
         <div class="footer__column" data-accordion="element">
           <h2 class="footer__title" data-accordion="button">НАШ ОФИС</h2>
-          <ul class="footer__list" data-accordion="content">
+          <div class="footer__sections-wrapper footer__sections-wrapper--contacts" data-accordion="content">
+          <ul class="footer__list footer__list--padding">
             <li class="footer__list-item">
               <a class="footer__link" target="_blank" href="https://yandex.ru/maps/-/CCUOjKA98A">
                 г. Мытищи, Олимпийский проспект, д.10
@@ -262,6 +316,7 @@
               <a class="footer__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
             </li>
           </ul>
+          </div>
         </div>
       </div>
     </div>

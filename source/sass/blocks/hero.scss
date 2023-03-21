@@ -3,13 +3,11 @@
 
 .hero {
   position: relative;
-  //margin: -120px auto 0;
   margin-top: -120px;
   padding-top: 305px;
   padding-left: 475px;
   min-height: 880px;
   color: v.$color-alice-blue;
-  //max-width: v.$vp-1920;
 
   @include m.vp-1023 {
     min-height: 640px;
@@ -69,6 +67,7 @@
   line-height: 94px;
   letter-spacing: 0.07em;
   font-weight: 700;
+  user-select: none;
 
   @include m.vp-1023 {
     font-size: 64px;
@@ -86,6 +85,7 @@
   font-size: 22px;
   line-height: 34px;
   font-family: v.$ff-text;
+  user-select: none;
 
   @include m.vp-767 {
     font-size: 14px;
