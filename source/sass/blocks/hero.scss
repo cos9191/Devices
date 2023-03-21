@@ -55,7 +55,7 @@
   z-index: 3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fill, auto);
+  //grid-template-rows: repeat(auto-fill, auto);
   justify-content: start;
   gap: 40px;
 }

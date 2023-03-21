@@ -75,6 +75,7 @@
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
+  text-align: justify;
 
   @include m.vp-767 {
     font-size: 14px;
