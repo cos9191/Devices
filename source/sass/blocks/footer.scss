@@ -72,9 +72,10 @@
 
 .footer__logo-link {
   align-self: center;
+  transition: opacity v.$trans-default;
 
   @include m.hover {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
 
@@ -97,10 +98,10 @@
   align-items: center;
   justify-content: center;
   color: v.$color-socials-icon;
-  transition: color v.$trans-default;
+  transition: color v.$trans-default, opacity v.$trans-default;
 
   @include m.hover {
-    opacity: 0.8;
+    opacity: 0.6;
     color: v.$color-deep-sky-blue;
   }
 
@@ -142,6 +143,7 @@
   letter-spacing: 0.05em;
   margin: 0;
   user-select: none;
+  transition: opacity v.$trans-default;
 
   @include m.vp-767 {
     width: 100%;
@@ -164,7 +166,7 @@
     }
 
     @include m.hover {
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 }
@@ -198,9 +200,10 @@
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
+  transition: opacity v.$trans-default;
 
   @include m.hover {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   @include m.vp-767 {

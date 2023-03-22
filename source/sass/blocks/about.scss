@@ -54,6 +54,7 @@
   display: grid;
   align-content: center;
   justify-items: center;
+  transition: opacity v.$trans-default;
 
   @include m.vp-767 {
     min-width: 160px;

@@ -52,9 +52,10 @@
 
 .header__logo-link {
   align-self: center;
+  transition: opacity v.$trans-default;
 
   @include m.hover {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
 
