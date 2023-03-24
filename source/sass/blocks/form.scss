@@ -149,7 +149,6 @@
 
 .form__submit-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   @include m.vp-1023 {
@@ -176,6 +175,7 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  max-width: 265px;
 
   @include m.vp-767 {
     width: 100%;

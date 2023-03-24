@@ -23,11 +23,11 @@
 
 .contacts__item svg {
   color: v.$color-deep-sky-blue;
+  min-width: 20px;
 }
 
 .contacts__item {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -36,7 +36,6 @@
 .contacts__item a {
   color: inherit;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
