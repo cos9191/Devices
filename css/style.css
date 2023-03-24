@@ -1330,14 +1330,13 @@ button,
 
 .contacts__item svg {
   color: #00b2ff;
+  min-width: 20px;
 }
 
 .contacts__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1352,8 +1351,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1438,8 +1435,6 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1868,7 +1863,7 @@ button,
 
 .catalog__container {
   max-width: 1220px;
-  padding: 66px 0 140px;
+  padding: 66px 25px 140px;
 }
 @media (max-width: 1023px) {
   .catalog__container {
@@ -2241,8 +2236,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2284,6 +2277,7 @@ button,
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  max-width: 265px;
 }
 @media (max-width: 767px) {
   .form__btn {
