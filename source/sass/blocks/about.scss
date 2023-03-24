@@ -2,7 +2,7 @@
 @use "../mixins" as m;
 
 .about__container {
-  padding: 60px 32px 100px;
+  padding: 120px 0 100px 0;
   max-width: 1220px;
   margin: 0 auto;
   display: grid;
@@ -10,36 +10,55 @@
   grid-template-columns: repeat(2, minmax(10px, auto));
 
   @include m.vp-1023 {
-    padding: 20px 50px 80px;
+    padding: 80px 50px 80px 46px;
+    gap: 30px;
   }
 
   @include m.vp-767 {
     grid-template-columns: minmax(10px, 1fr);
     max-width: 595px;
-    padding: 0 25px 80px;
+    padding: 46px 25px 80px;
   }
 }
 
 .about__text h2 {
-  margin: 0;
+  margin: 0 0 -10px;
   font-family: v.$ff-title;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: v.$color-black-pearl;
+
+  @include m.vp-1023 {
+    margin-bottom: 0;
+    line-height: 39px;
+  }
+
+  @include m.vp-767 {
+    font-size: 28px;
+  }
 }
 
 .about__text p {
-  margin: 15px 0 0;
+  margin: 22px 0 0;
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
   color: v.$color-black-pearl;
-  text-align: justify;
+
+  @include m.vp-1023 {
+    margin-top: 18px;
+  }
+
+  @include m.vp-767 {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .about__text button {
-  margin: 20px 0 0;
+  margin: 38px 0 0;
   background-color: v.$color-transparent;
   color: v.$color-deep-sky-blue;
   border: 1px solid v.$color-deep-sky-blue;
@@ -56,8 +75,13 @@
   justify-items: center;
   transition: opacity v.$trans-default;
 
+  @include m.vp-1023 {
+    margin-top: 18px;
+  }
+
   @include m.vp-767 {
     min-width: 160px;
     min-height: 35px;
+    width: 100%;
   }
 }

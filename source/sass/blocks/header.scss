@@ -37,37 +37,41 @@
 
 .header__nav {
   display: grid;
-  grid-template-columns: 215px max-content max-content;
-  gap: 12%;
+  grid-template-columns: 215px minmax(10px, 462px) minmax(10px, 160px);
+  gap: 10.55%;
   width: 100%;
-  place-content: center;
+  margin-left: 16.85%;
 
   @include m.vp-1023 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: unset;
   }
 }
 
 .header__logo-link {
   align-self: center;
   transition: opacity v.$trans-default;
+  margin-right: 100%;
 
   @include m.hover {
     opacity: 0.6;
+  }
+
+  @include m.vp-1023 {
+    margin-right: unset;
   }
 }
 
 .header__btn {
   background-color: v.$color-transparent;
-  padding: 10px 15px;
+  padding: 10px 15px 12px;
   border: 1px solid #f2f5f7;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   font-size: 14px;
   line-height: 16px;
-  height: fit-content;
-  width: fit-content;
   align-self: center;
   font-family: v.$ff-title;
   font-weight: 700;

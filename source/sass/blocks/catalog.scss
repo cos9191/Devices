@@ -7,17 +7,15 @@
 
 .catalog__container {
   max-width: 1220px;
-  padding-top: 70px;
-  padding-bottom: 140px;
+  padding: 66px 0 140px;
 
   @include m.vp-1023 {
-    padding-top: 60px;
+    padding-top: 54px;
     padding-bottom: 75px;
   }
 
   @include m.vp-767 {
-    padding-top: 50px;
-    padding-bottom: 86px;
+    padding: 46px 25px 86px;
   }
 }
 
@@ -32,12 +30,17 @@
   @include m.vp-1023 {
     max-width: 670px;
   }
+
+  @include m.vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .catalog__container ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 50px auto 0;
+  margin: 54px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(10px, 350px));
   grid-template-rows: auto;
@@ -47,6 +50,11 @@
     grid-template-columns: minmax(10px, 1fr);
     gap: 30px;
     max-width: 670px;
+    margin-top: 39px;
+  }
+
+  @include m.vp-767 {
+    margin-top: 29px;
   }
 }
 
@@ -102,6 +110,11 @@
   background-position: center;
   border-radius: 3px 0 0 0;
   transition: opacity v.$trans-default;
+
+  @include m.vp-767 {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .catalog__item:hover a::after {
@@ -120,8 +133,22 @@
 
 .catalog__item span {
   position: absolute;
-  top: 50px;
+  top: 46px;
   left: 40px;
   z-index: 2;
   max-width: 210px;
+  font-family: v.$ff-title;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include m.vp-1023 {
+    top: 37px;
+    left: 45px;
+  }
+
+  @include m.vp-767 {
+    top: 26px;
+    left: 30px;
+    font-size: 18px;
+  }
 }

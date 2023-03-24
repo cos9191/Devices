@@ -49,26 +49,16 @@
         </a>
         <ul class="contacts">
           <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@sd.ru?subject=Печатные_платы">
-              <svg
-                class="contacts__icon"
-                aria-hidden="true"
-                focusable="false"
-                width="20" height="20"
-              >
+            <a href="mailto:info@sd.ru?subject=Печатные_платы">
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon_mail"/>
               </svg>
               <span class="visibility-desktop">info@sd.ru</span>
             </a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__link" href="tel:+74950005252">
-              <svg
-                class="contacts__icon"
-                aria-hidden="true"
-                focusable="false"
-                width="20" height="20"
-              >
+            <a href="tel:+74950005252">
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon_phone"/>
               </svg>
               <span class="visibility-desktop">+7 (495) 000 52 52</span>
@@ -114,10 +104,10 @@
           >
         </picture>
       </div>
-      <div class="hero__text-wrapper container">
+      <div class="container hero__text-wrapper">
         <h1>ПЕЧАТНЫЕ ПЛАТЫ</h1>
-        <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-        <a class="btn hero__btn" href="#">
+        <p>производство и&nbsp;монтаж, поставка комплектующих,<br class="visibility-desktop"> блоков и&nbsp;модулей</p>
+        <a class="btn hero__btn" href="#form">
           <span class="visibility-tablet visibility-desktop">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
           <span class="visibility-mobile">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
         </a>
@@ -223,10 +213,11 @@
     <!--  CATALOG  -->
     <section class="catalog">
       <div class="container catalog__container">
-        <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <h2 class="visibility-tablet visibility-desktop">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <h2 class="visibility-mobile">Товары и&nbsp;услуги<br>Smart Device</h2>
         <ul>
           <li class="catalog__item">
-            <a href="#">
+            <a href="#!">
               <span>Производство<br>печатных плат</span>
               <picture>
                 <source
@@ -259,8 +250,9 @@
             </a>
           </li>
           <li class="catalog__item">
-            <a href="#">
-              <span>Монтаж<br>печатных плат</span>
+            <a href="#!">
+              <span>Монтаж<br class="visibility-mobile"><br class="visibility-tablet"> печатных<br
+                class="visibility-desktop"> плат</span>
               <picture>
                 <source
                   srcset="img/catalog/assembly_mobile.webp, img/catalog/assembly_mobile@2x.webp 2x"
@@ -292,7 +284,7 @@
             </a>
           </li>
           <li class="catalog__item">
-            <a href="#">
+            <a href="#!">
               <span>Комплектующие<br>для светотехники</span>
               <picture>
                 <source
@@ -329,7 +321,7 @@
     </section>
 
     <!--  FORM  -->
-    <section class="form">
+    <section class="form" id="form">
       <div class="container form__container" data-form-validate data-callback="base">
         <div class="form__img-wrapper visibility-desktop">
           <picture>
@@ -360,11 +352,11 @@
             </label>
           </div>
           <div class="form__submit-wrapper">
-            <button class="btn form__btn" type="submit">ЗАДАТЬ ВОПРОС</button>
             <label class="checkbox checkbox--form" for="personal-data" data-validate-type="checkbox" data-required>
-              <input class="checkbox__input" type="checkbox" id="personal-data" name="personal-data" required>
+              <input class="checkbox__input" type="checkbox" id="personal-data" name="personal-data" checked required>
               <span class="checkbox__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
+            <button class="btn form__btn" type="submit">ЗАДАТЬ ВОПРОС</button>
           </div>
         </form>
       </div>
@@ -409,38 +401,38 @@
         </ul>
       </div>
       <div class="footer__accordion" data-accordion="parent" data-single="data-single"
-            data-destroy="(max-width: 767px)">
-        <div class="footer__column" data-accordion="element">
+           data-destroy="(max-width: 767px)">
+        <div class="footer__column footer__column--accordion" data-accordion="element">
           <h2 class="footer__title" data-accordion="button">РАЗДЕЛЫ САЙТА</h2>
           <div class="footer__sections-wrapper" data-accordion="content">
             <ul class="footer__list footer__list--padding">
               <li class="footer__list-item">
-                <a class="footer__link" href="#">О Компании</a>
+                <a class="footer__link" href="#!">О Компании</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Продукты</a>
+                <a class="footer__link" href="#!">Продукты</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Производство печатных плат</a>
+                <a class="footer__link" href="#!">Производство печатных плат</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Монтаж печатных плат</a>
+                <a class="footer__link" href="#!">Монтаж печатных плат</a>
               </li>
             </ul>
             <ul class="footer__list">
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Комплектующие</a>
+                <a class="footer__link" href="#!">Комплектующие</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Доставка</a>
+                <a class="footer__link" href="#!">Доставка</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__link" href="#">Контакты</a>
+                <a class="footer__link" href="#!">Контакты</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="footer__column" data-accordion="element">
+        <div class="footer__column footer__column--accordion" data-accordion="element">
           <h2 class="footer__title" data-accordion="button">НАШ ОФИС</h2>
           <div class="footer__sections-wrapper footer__sections-wrapper--contacts" data-accordion="content">
             <ul class="footer__list footer__list--padding">
@@ -465,16 +457,13 @@
     </div>
   </footer>
 
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
-
-  <!-- Модалки -->
+  <!-- MODAL WINDOW -->
   <div class="modal modal--preload modal--fit-content" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content modal__content--cb" data-form-validate data-callback="base">
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="25" height="25">
+          <svg width="20" height="20">
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
@@ -493,17 +482,20 @@
             </label>
           </div>
           <div class="modal__submit-wrapper">
-            <button class="btn form__btn modal__btn" type="submit">ОТПРАВИТЬ</button>
             <label class="checkbox checkbox--modal" for="personal-data--cb" data-validate-type="checkbox" data-required>
-              <input class="checkbox__input" type="checkbox" id="personal-data--cb" name="personal-data" required>
+              <input class="checkbox__input" type="checkbox" id="personal-data--cb" name="personal-data" checked
+                     required>
               <span class="checkbox__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
+            <button class="btn modal__btn" type="submit">ОТПРАВИТЬ</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 </div>
 </body>
 </html>

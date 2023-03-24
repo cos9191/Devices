@@ -4,21 +4,19 @@
 .hero {
   position: relative;
   margin-top: -120px;
-  padding-top: 305px;
-  padding-left: 475px;
+  padding-top: 300px;
+  padding-left: 24.74%;
   min-height: 880px;
   color: v.$color-alice-blue;
 
   @include m.vp-1023 {
-    min-height: 640px;
-    padding-top: 180px;
-    padding-left: 50px;
+    min-height: 660px;
+    padding: 198px 50px 0;
   }
 
   @include m.vp-767 {
-    min-height: 560px;
-    padding-top: 150px;
-    padding-left: 24px;
+    min-height: 610px;
+    padding: 198px 25px 0;
   }
 }
 
@@ -56,7 +54,16 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 36px;
+  padding: 0;
+
+  @include m.vp-1023 {
+    gap: 4px;
+  }
+
+  @include m.vp-767 {
+    gap: 10px;
+  }
 }
 
 .hero h1 {
@@ -64,7 +71,7 @@
   font-family: v.$ff-title;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   font-weight: 700;
   user-select: none;
 
@@ -95,14 +102,20 @@
 .hero__btn {
   height: fit-content;
   width: fit-content;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 0.05em;
-  padding: 15px 25px;
+  letter-spacing: 0.06em;
+  padding: 16px 25px;
   font-family: v.$ff-title;
   font-weight: 700;
+  margin-top: 11px;
 
   @include m.vp-1023 {
+    margin-top: 52px;
     margin-left: 45px;
   }
 
@@ -110,7 +123,9 @@
   @include m.vp-767 {
     font-size: 14px;
     line-height: 16px;
-    padding: 10px 30px;
+    padding: 12px 30px;
+    margin-top: 36px;
     margin-left: 0;
+    width: 100%;
   }
 }

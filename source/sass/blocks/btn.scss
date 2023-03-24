@@ -14,6 +14,8 @@
 
   transition: opacity v.$trans-default;
 
+  user-select: none;
+
   &--red {
     background-color: v.$color-torch-red;
   }
