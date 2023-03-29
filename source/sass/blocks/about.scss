@@ -18,6 +18,13 @@
     grid-template-columns: minmax(10px, 1fr);
     max-width: 595px;
     padding: 46px 25px 80px;
+    gap: 0;
+  }
+
+  img {
+    @media (max-width: v.$vp-768) {
+      display: none;
+    }
   }
 }
 
@@ -39,7 +46,8 @@
   }
 }
 
-.about__text p {
+.about__text p,
+.about__text span {
   margin: 22px 0 0;
   font-family: v.$ff-text;
   font-size: 16px;
@@ -57,8 +65,20 @@
   }
 }
 
-.about__text button {
-  margin: 38px 0 0;
+.about__text span {
+  margin-top: 0;
+
+  @include m.vp-767 {
+    display: none;
+  }
+}
+
+.about__text.is-active span {
+  display: inline;
+}
+
+.about__btn {
+  margin: 32px 0 0;
   background-color: v.$color-transparent;
   color: v.$color-deep-sky-blue;
   border: 1px solid v.$color-deep-sky-blue;
@@ -76,12 +96,13 @@
   transition: opacity v.$trans-default;
 
   @include m.vp-1023 {
-    margin-top: 18px;
+    margin-top: 8px;
   }
 
   @include m.vp-767 {
     min-width: 160px;
     min-height: 35px;
     width: 100%;
+    margin-top: 17px;
   }
 }

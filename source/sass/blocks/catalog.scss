@@ -7,7 +7,11 @@
 
 .catalog__container {
   max-width: 1220px;
-  padding: 66px 25px 140px;
+  padding: 66px 0 140px;
+
+  @include m.vp-1279 {
+    padding: 66px 25px 140px;
+  }
 
   @include m.vp-1023 {
     padding-top: 54px;
@@ -42,7 +46,8 @@
   padding-left: 0;
   margin: 54px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(10px, 350px));
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
   grid-template-rows: auto;
   gap: 7%;
 
@@ -63,6 +68,8 @@
   min-height: 650px;
   justify-self: center;
   transition: box-shadow v.$trans-default;
+  width: 100%;
+  max-width: 100%;
 
   @include m.vp-1023 {
     min-height: 250px;
@@ -82,9 +89,9 @@
   display: block;
   color: v.$color-default-white;
   height: 100%;
-  width: 100%;
 }
 
+// Img filter
 .catalog__item a::before {
   content: "";
   position: absolute;
@@ -96,6 +103,7 @@
   background: rgba(4, 24, 39, 0.5);
 }
 
+// Btn
 .catalog__item a::after {
   content: "";
   position: absolute;
@@ -125,30 +133,35 @@
   object-fit: cover;
   height: 100%;
 
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   @include m.vp-1023 {
-    width: 100%;
     max-height: 100%;
   }
 }
 
 .catalog__item span {
-  position: absolute;
-  top: 46px;
-  left: 40px;
+  position: relative;
   z-index: 2;
-  max-width: 210px;
   font-family: v.$ff-title;
   font-size: 20px;
   line-height: 30px;
+  display: inline-block;
+  padding: 46px 10px 50px 40px;
+  max-height: 570px;
 
   @include m.vp-1023 {
-    top: 37px;
-    left: 45px;
+    padding: 36px 10px 75px 45px;
+    max-height: unset;
   }
 
   @include m.vp-767 {
-    top: 26px;
-    left: 30px;
+    padding: 27px 10px 75px 30px;
     font-size: 18px;
   }
 }

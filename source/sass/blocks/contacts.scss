@@ -3,7 +3,7 @@
 
 .contacts {
   list-style-type: none;
-  padding: 0;
+  padding: 12px 0 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +14,7 @@
 
   @include m.vp-1023 {
     gap: 20px;
+    padding-top: 0;
   }
 
   @include m.vp-767 {
@@ -21,31 +22,37 @@
   }
 }
 
-.contacts__item svg {
-  color: v.$color-deep-sky-blue;
-  min-width: 20px;
-}
-
 .contacts__item {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-}
 
-.contacts__item a {
-  color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  transition: opacity v.$trans-default;
+  a {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: opacity v.$trans-default;
 
-  @include m.vp-1023 {
-    padding: 10px;
+    @include m.vp-1023 {
+      padding: 10px;
+    }
+
+    @include m.hover-focus {
+      opacity: 0.6;
+    }
   }
 
-  @include m.hover-focus {
-    opacity: 0.6;
+  svg {
+    color: v.$color-deep-sky-blue;
+    min-width: 20px;
+  }
+
+  span {
+    @media (max-width: v.$vp-1024) {
+      display: none;
+    }
   }
 }

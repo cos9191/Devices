@@ -5,6 +5,7 @@
   background-color: v.$color-deep-sky-blue;
   color: v.$color-default-white;
   max-width: 500px;
+  padding-bottom: 43px;
 }
 
 .modal__close-btn {
@@ -14,6 +15,13 @@
   @include m.hover {
     color: v.$color-black-pearl;
   }
+}
+
+.modal__form {
+  min-width: 420px;
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr);
+  gap: 20px 20px;
 }
 
 .modal__form h2 {
@@ -28,24 +36,13 @@
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
-  margin: 4px 0 0;
+  margin: -14px 0 18px;
 }
 
-.modal__form {
-  min-width: 420px;
-  display: grid;
-  grid-template-columns: minmax(10px, 1fr);
-}
-
-.modal__inputs-wrapper {
-  display: grid;
-  grid-template-columns: minmax(10px, 1fr);
-  gap: 20px 20px;
-  padding: 40px 0 20px;
-}
-
-.modal__inputs-wrapper input,
-.modal__inputs-wrapper textarea {
+.modal__form input[type="text"],
+.modal__form input[type="tel"],
+.modal__form input[type="email"],
+.modal__form textarea {
   background-color: rgba(4, 20, 39, 0.15);
   border: 2px solid transparent;
   border-radius: 3px;
@@ -58,30 +55,24 @@
   transition: border v.$trans-default;
 }
 
-.modal__inputs-wrapper input:hover,
-.modal__inputs-wrapper textarea:hover {
+.modal__form input[type="text"]:hover,
+.modal__form input[type="tel"]:hover,
+.modal__form input[type="email"]:hover,
+.modal__form textarea:hover {
   border: 2px solid v.$color-alice-blue;
 }
 
-.modal__inputs-wrapper textarea {
+.modal__form textarea {
   padding: 25px 15px;
   min-height: 155px;
 }
 
-.modal__inputs-wrapper input::placeholder,
-.modal__inputs-wrapper textarea::placeholder {
+.modal__form input::placeholder,
+.modal__form textarea::placeholder {
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
   color: v.$color-default-white;
-}
-
-.modal__submit-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .modal__btn {
@@ -96,51 +87,11 @@
   display: flex;
   justify-content: center;
   align-self: center;
-
   width: 100%;
 }
 
 .checkbox--modal {
   order: 1;
-  align-items: unset;
-  align-self: center;
-}
-
-.checkbox__input {
-  appearance: none;
-  position: relative;
-  min-width: 15px;
-  height: 15px;
-  border: 1px solid v.$color-default-white;
-  border-radius: 2px;
-  cursor: inherit;
-  transition: opacity v.$trans-default;
-}
-
-.checkbox__input::before {
-  position: absolute;
-  border-top: 1px solid v.$color-default-white;
-  border-right: 1px solid v.$color-default-white;
-  width: 6px;
-  height: 4px;
-  transform: rotate(135deg);
-  left: 3px;
-  top: 3px;
-}
-
-.checkbox .checkbox__input:checked::before {
-  content: "";
-}
-
-.checkbox:hover input,
-.checkbox:hover span {
-  opacity: 0.6;
-}
-
-.checkbox__text {
-  font-family: v.$ff-text;
-  font-size: 14px;
-  line-height: 16px;
-  opacity: 0.8;
-  transition: opacity v.$trans-default;
+  margin-left: 10px;
+  justify-content: flex-start;
 }

@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: v.$retina-dpi), (min-resolution: v.$retina-dppx) {
     @content;
   }
 }

@@ -1,13 +1,27 @@
-[data-accordion="element"].is-active > [data-accordion="content"] {
+.footer__column--accordion.is-active > .footer__lists-wrapper {
   max-height: 100%;
 }
 
-[data-accordion="parent"].no-transition [data-accordion="content"] {
+.footer__container.no-transition .footer__lists-wrapper {
   transition: none;
 }
 
-[data-accordion="content"] {
+.footer__lists-wrapper {
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;
 }
+
+//[data-accordion="element"].is-active > [data-accordion="content"] {
+//  max-height: 100%;
+//}
+//
+//[data-accordion="parent"].no-transition [data-accordion="content"] {
+//  transition: none;
+//}
+//
+//[data-accordion="content"] {
+//  max-height: 0;
+//  transition: max-height 0.3s;
+//  overflow: hidden;
+//}

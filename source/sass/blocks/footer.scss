@@ -9,9 +9,9 @@
   min-height: 280px;
   color: v.$color-footer-text;
   display: grid;
-  grid-template-columns: minmax(10px, 1fr) minmax(10px, 2fr);
-  padding: 50px 17.9% 50px 12.2%;
-  gap: 35px 0;
+  grid-template-columns: minmax(10px, 345px) minmax(10px, 470px) minmax(10px, 345px);
+  gap: 30px;
+  place-content: center;
 
   @include m.vp-1023 {
     grid-template-columns: minmax(10px, 1fr);
@@ -60,8 +60,11 @@
 }
 
 .footer__column--socials {
+  justify-self: start;
+
   @include m.vp-1023 {
     grid-column: span 2;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -95,26 +98,25 @@
   }
 }
 
-.footer__socials {
+.footer__socials-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-self: center;
+  align-self: flex-start;
   justify-content: center;
   list-style-type: none;
-  padding-left: 0;
-  padding-right: 46px;
+  padding-left: 10px;
   margin: 0;
   gap: 15px;
 
   @include m.vp-1023 {
-    padding-right: 0;
-    align-self: flex-start;
+    padding-top: 5px;
   }
 
   @include m.vp-767 {
     align-self: center;
-    margin-top: 8px;
+    padding-top: 9px;
+    padding-left: 4px;
   }
 }
 
@@ -137,37 +139,25 @@
   }
 }
 
-
-.footer__accordion {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0 0 44px;
-
-  @include m.vp-1023 {
-    padding: 0;
-  }
-
-  @include m.vp-767 {
-    flex-direction: column;
-  }
-}
-
-.footer__sections-wrapper {
+.footer__lists-wrapper {
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
-  gap: 2px;
+  gap: 30px;
+  padding-left: 3px;
 
   @include m.vp-1023 {
     grid-template-columns: minmax(10px, 1fr);
     gap: 6px;
+    padding-left: 0;
   }
 
   @include m.vp-767 {
     width: 100%;
+    gap: 10px;
   }
 }
 
-.footer__sections-wrapper--contacts {
+.footer__lists-wrapper--contacts {
   display: flex;
 }
 
@@ -245,12 +235,6 @@
 
   @include m.vp-767 {
     margin-bottom: 10px;
-  }
-}
-
-.footer__list-item:first-child {
-  @include m.vp-767 {
-    margin-bottom: 20px;
   }
 }
 
