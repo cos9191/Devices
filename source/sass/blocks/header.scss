@@ -51,10 +51,15 @@
 
   @include m.vp-767 {
     width: 55px;
-    height: 55px;
     overflow: hidden;
     transform: scale(0.64);
     transform-origin: top left;
+  }
+
+  & img {
+    @include m.vp-767 {
+      max-width: unset;
+    }
   }
 }
 

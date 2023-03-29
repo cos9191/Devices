@@ -1530,7 +1530,6 @@ button,
 @media (max-width: 767px) {
   .header__logo-link {
     width: 55px;
-    height: 55px;
     overflow: hidden;
     -webkit-transform: scale(0.64);
         -ms-transform: scale(0.64);
@@ -1538,6 +1537,11 @@ button,
     -webkit-transform-origin: top left;
         -ms-transform-origin: top left;
             transform-origin: top left;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo-link img {
+    max-width: unset;
   }
 }
 
