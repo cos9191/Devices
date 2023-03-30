@@ -4,6 +4,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initSpoiler} from './modules/accordion/spoiler';
+import {initAutoResizeTextarea} from './utils/auto-resize-textarea';
 
 // ---------------------------------
 
@@ -13,10 +14,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initAutoResizeTextarea();
 
   // Modules
   // ---------------------------------
 
+  initModals();
+  initAccordions();
+  initSpoiler();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -25,9 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initModals();
-    initAccordions();
-    initSpoiler();
+
   });
 });
 

@@ -22,6 +22,11 @@
   display: grid;
   grid-template-columns: minmax(10px, 1fr);
   gap: 20px 20px;
+
+  div,
+  span {
+    position: relative;
+  }
 }
 
 .modal__form h2 {
@@ -51,6 +56,7 @@
   font-size: 16px;
   line-height: 22px;
   color: v.$color-default-white;
+  font-weight: 600;
   width: 100%;
   transition: border v.$trans-default;
 }
@@ -73,6 +79,7 @@
   font-size: 16px;
   line-height: 22px;
   color: v.$color-default-white;
+  opacity: 0.7;
 }
 
 .modal__btn {
@@ -94,4 +101,26 @@
   order: 1;
   margin-left: 10px;
   justify-content: flex-start;
+}
+
+// Валидация
+
+.is-invalid > input[type="text"],
+.is-invalid > input[type="tel"],
+.is-invalid > input {
+  border-color: v.$color-torch-red;
+}
+
+.is-invalid > span {
+  color: v.$color-torch-red;
+  font-weight: 600;
+}
+
+.is-invalid > .input-message {
+  position: absolute;
+  left: 17px;
+  bottom: -22px;
+  color: v.$color-default-black;
+  font-weight: 400;
+  font-size: 14px;
 }

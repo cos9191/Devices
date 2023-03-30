@@ -2183,6 +2183,10 @@ h2[data-catalog-title-text]::after {
   background-color: #00b2ff;
   color: #ffffff;
 }
+.form div,
+.form span {
+  position: relative;
+}
 
 .form::before {
   content: "";
@@ -2319,7 +2323,7 @@ h2[data-catalog-title-text]::after {
   font-family: "PT Mono", "Lucida Console", monospace;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
   width: 100%;
   -webkit-transition: border 0.3s ease;
@@ -2349,6 +2353,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .form input::-moz-placeholder, .form textarea::-moz-placeholder {
@@ -2356,6 +2361,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
@@ -2363,6 +2369,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
@@ -2370,6 +2377,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .form input::placeholder,
@@ -2378,6 +2386,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .form__btn {
@@ -2431,12 +2440,23 @@ h2[data-catalog-title-text]::after {
 }
 
 .is-invalid > input[type=text],
-.is-invalid > input[type=tel] {
-  border-color: #ff0000;
+.is-invalid > input[type=tel],
+.is-invalid > input {
+  border-color: #ff1553;
 }
 
 .is-invalid > span {
-  color: #ff0000;
+  color: #ff1553;
+  font-weight: 600;
+}
+
+.is-invalid > .input-message {
+  position: absolute;
+  left: 17px;
+  bottom: -22px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .footer {
@@ -2809,6 +2829,10 @@ h2[data-catalog-title-text]::after {
   grid-template-columns: minmax(10px, 1fr);
   gap: 20px 20px;
 }
+.modal__form div,
+.modal__form span {
+  position: relative;
+}
 
 .modal__form h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -2837,6 +2861,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  font-weight: 600;
   width: 100%;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
@@ -2860,6 +2885,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .modal__form input::-moz-placeholder, .modal__form textarea::-moz-placeholder {
@@ -2867,6 +2893,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .modal__form input:-ms-input-placeholder, .modal__form textarea:-ms-input-placeholder {
@@ -2874,6 +2901,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .modal__form input::-ms-input-placeholder, .modal__form textarea::-ms-input-placeholder {
@@ -2881,6 +2909,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .modal__form input::placeholder,
@@ -2889,6 +2918,7 @@ h2[data-catalog-title-text]::after {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  opacity: 0.7;
 }
 
 .modal__btn {
@@ -2920,6 +2950,26 @@ h2[data-catalog-title-text]::after {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.is-invalid > input[type=text],
+.is-invalid > input[type=tel],
+.is-invalid > input {
+  border-color: #ff1553;
+}
+
+.is-invalid > span {
+  color: #ff1553;
+  font-weight: 600;
+}
+
+.is-invalid > .input-message {
+  position: absolute;
+  left: 17px;
+  bottom: -22px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 /* @mixin hover-focus {

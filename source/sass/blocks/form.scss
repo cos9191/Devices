@@ -6,6 +6,11 @@
   z-index: 1;
   background-color: v.$color-deep-sky-blue;
   color: v.$color-default-white;
+
+  div,
+  span {
+    position: relative;
+  }
 }
 
 .form::before {
@@ -118,7 +123,7 @@
   font-family: v.$ff-text;
   font-size: 16px;
   line-height: 22px;
-  color: v.$color-default-black;
+  color: v.$color-default-white;
   font-weight: 600;
   width: 100%;
   transition: border v.$trans-default;
@@ -146,6 +151,7 @@
   font-size: 16px;
   line-height: 22px;
   color: v.$color-default-white;
+  opacity: 0.7;
 }
 
 .form__btn {
@@ -189,10 +195,21 @@
 // Валидация
 
 .is-invalid > input[type="text"],
-.is-invalid > input[type="tel"] {
-  border-color: v.$color-default-red;
+.is-invalid > input[type="tel"],
+.is-invalid > input {
+  border-color: v.$color-torch-red;
 }
 
 .is-invalid > span {
-  color: v.$color-default-red;
+  color: v.$color-torch-red;
+  font-weight: 600;
+}
+
+.is-invalid > .input-message {
+  position: absolute;
+  left: 17px;
+  bottom: -22px;
+  color: v.$color-default-black;
+  font-weight: 400;
+  font-size: 14px;
 }

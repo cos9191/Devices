@@ -327,15 +327,15 @@
         <form action="https://echo.htmlacademy.ru/" method="post">
           <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
           <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-          <div data-validate-type="text" data-on-input-validate data-required>
+          <div data-validate-type="text" data-on-input-validate data-required data-message-base="Укажите Ваше имя">
             <label class="visually-hidden" for="name">Ваше имя.</label>
             <input type="text" name="name" id="name" placeholder="Имя" title="Укажите Ваше имя" required>
           </div>
-          <div data-validate-type="phone" data-on-input-validate data-required>
+          <div data-validate-type="phone" data-on-input-validate data-required data-message-base="Укажите номер телефона">
             <label class="visually-hidden" for="phone-number">Ваш номер телефона.</label>
             <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" title="Укажите Ваше номер телефона" required>
           </div>
-          <span>
+          <span class="auto-resize-textarea">
             <label class="visually-hidden" for="issue">Ваш вопрос.</label>
             <textarea name="issue" id="issue" placeholder="Ваш вопрос"></textarea>
           </span>
@@ -452,15 +452,15 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-          <div data-validate-type="text" data-on-input-validate data-required>
+          <div data-validate-type="text" data-on-input-validate data-required data-message-base="Укажите Ваше имя">
             <label class="visually-hidden" for="name--modal">Ваше имя.</label>
-            <input type="text" name="name" id="name--modal" placeholder="Имя" title="Укажите Ваше имя" required data-focus>
+            <input type="text" name="name" id="name--modal" placeholder="Имя" title="Укажите Ваше имя" data-focus required>
           </div>
-          <div data-validate-type="phone" data-on-input-validate data-required>
+          <div data-validate-type="phone" data-on-input-validate data-required data-message-base="Укажите номер телефона">
             <label class="visually-hidden" for="phone-number--modal">Ваш номер телефона.</label>
             <input type="tel" name="phone-number" id="phone-number--modal" placeholder="Телефон" title="Укажите Ваше номер телефона" required>
           </div>
-          <span>
+          <span class="auto-resize-textarea">
             <label class="visually-hidden" for="issue--modal">Ваш вопрос.</label>
             <textarea name="issue" id="issue--modal" placeholder="Ваш вопрос"></textarea>
           </span>
