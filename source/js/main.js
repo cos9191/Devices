@@ -3,8 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initSpoiler} from './modules/accordion/spoiler';
-import {updateTextContent} from './modules/update-text-content/update-text-content';
-
 
 // ---------------------------------
 
@@ -27,7 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initAccordions();
     initSpoiler();
-    updateTextContent();
   });
 });
 

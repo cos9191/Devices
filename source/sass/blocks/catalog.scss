@@ -41,6 +41,22 @@
   }
 }
 
+h2[data-catalog-title-text-mobile]::before {
+  content: "";
+
+  @include m.vp-767 {
+    content: attr(data-catalog-title-text-mobile);
+  }
+}
+
+h2[data-catalog-title-text]::after {
+  content: attr(data-catalog-title-text);
+
+  @include m.vp-767 {
+    content: "";
+  }
+}
+
 .catalog__container ul {
   list-style-type: none;
   padding-left: 0;

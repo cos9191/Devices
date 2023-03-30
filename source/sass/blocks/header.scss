@@ -39,14 +39,9 @@
 
 .header__logo-link {
   transition: opacity v.$trans-default;
-  margin-right: 100%;
 
   @include m.hover {
     opacity: 0.6;
-  }
-
-  @include m.vp-1023 {
-    margin-right: unset;
   }
 
   @include m.vp-767 {

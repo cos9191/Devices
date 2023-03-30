@@ -34,7 +34,7 @@
         </a>
         <ul class="contacts">
           <li class="contacts__item">
-            <a href="mailto:info@sd.ru?subject=Печатные_платы">
+            <a href="mailto:info@sd.ru?subject=Печатные_платы" aria-label="Отправить Smart Device письмо.">
               <svg aria-hidden="true" focusable="false" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon_mail"/>
               </svg>
@@ -42,15 +42,15 @@
             </a>
           </li>
           <li class="contacts__item">
-            <a href="tel:+74950005252">
+            <a href="tel:+74950005252" aria-label="Позвонить Smart Device.>
               <svg aria-hidden="true" focusable="false" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon_phone"/>
+                <use xlink:href="img/sprite.svg#icon_phone">
               </svg>
               <span>+7 (495) 000 52 52</span>
             </a>
           </li>
         </ul>
-        <a class="btn header__btn" href="#" data-open-modal="feedback">ЗАКАЗАТЬ&nbsp;ЗВОНОК</a>
+        <a class="btn header__btn" href="#" data-open-modal="feedback">Заказать&nbsp;звонок</a>
       </nav>
     </div>
   </header>
@@ -90,10 +90,15 @@
         </picture>
       </div>
       <div class="container hero__text-wrapper">
-        <h1>ПЕЧАТНЫЕ ПЛАТЫ</h1>
+        <h1>Печатные платы</h1>
         <p>производство и&nbsp;монтаж, поставка комплектующих,<br> блоков и&nbsp;модулей</p>
-        <a class="btn hero__btn" href="#form">
-          <span data-text="hero-btn">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
+        <a
+          class="btn hero__btn"
+          href="#form"
+          data-hero-btn-text="Получить бесплатную консультацию"
+          data-hero-btn-text-mobile="Бесплатная консультация"
+        >
+          <span class="visually-hidden">Бесплатная консультация</span>
         </a>
       </div>
     </section>
@@ -183,7 +188,7 @@
               Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
             </p>
           </div>
-          <button class="btn about__btn" type="button" data-accordion="button">ПОДРОБНЕЕ</button>
+          <button class="btn about__btn" type="button" data-accordion="button">Подробнее</button>
         </div>
       </div>
     </section>
@@ -191,7 +196,13 @@
     <!--  CATALOG  -->
     <section class="catalog">
       <div class="container catalog__container">
-        <h2 data-text="catalog-title">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <h2
+          data-text="catalog-title"
+          data-catalog-title-text-mobile="Товары и&nbsp;услуги Smart&nbsp;Device"
+          data-catalog-title-text="Smart Device предлагает следующие товары и&nbsp;услуги"
+        >
+          <span class="visually-hidden">Товары и&nbsp;услуги Smart&nbsp;Device</span>
+        </h2>
         <ul>
           <li class="catalog__item">
             <a href="#!">
@@ -344,10 +355,8 @@
     <div class="container footer__container" data-accordion="parent" data-single="data-single"
           data-destroy="(max-width: 767px)">
       <div class="footer__column footer__column--socials">
-        <a class="footer__logo-link " href="index.html">
-          <svg class="footer__logo" aria-hidden="true" focusable="false" width="215" height="55">
-            <use xlink:href="img/sprite.svg#logo_desktop"/>
-          </svg>
+        <a class="footer__logo-link" href="index.html">
+          <img src="img/logo_desktop.svg"  width="215" height="55" alt="Логотип Smart Device.">
         </a>
         <ul class="footer__socials-list">
           <li>
