@@ -5,6 +5,15 @@ import styles from './gulp/compileStyles.mjs';
 import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import {optimizeSvg, sprite, createWebp, optimizePng, optimizeJpg} from './gulp/optimizeImages.mjs';
+import bemlinter from 'gulp-html-bemlinter';
+import { htmlValidator } from "gulp-w3c-html-validator";
+
+const validateMarkup = () => gulp.src('source/*.html')
+  .pipe(htmlValidator.analyzer())
+  .pipe(htmlValidator.reporter({ throwErrors: true }));
+
+const lintBem = () => gulp.src('source/*.html')
+  .pipe(bemlinter());
 
 const server = browserSync.create();
 const streamStyles = () => styles().pipe(server.stream());
@@ -43,4 +52,4 @@ const build = gulp.series(clean, copy, sprite, gulp.parallel(styles, js, optimiz
 const dev = gulp.series(clean, copy, sprite, gulp.parallel(styles, js, optimizePng, optimizeJpg, optimizeSvg), syncServer);
 const start = gulp.series(clean, copy, sprite, gulp.parallel(styles, js), syncServer);
 
-export { createWebp as webp, build, start, dev};
+export { createWebp as webp, build, start, dev, validateMarkup, lintBem};

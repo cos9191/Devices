@@ -65,7 +65,7 @@ h2[data-catalog-title-text]::after {
   grid-template-columns: repeat(3, 1fr);
   max-width: 100%;
   grid-template-rows: auto;
-  gap: 7%;
+  gap: 85px;
 
   @include m.vp-1023 {
     grid-template-columns: minmax(10px, 1fr);

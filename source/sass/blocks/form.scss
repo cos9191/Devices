@@ -184,6 +184,7 @@
   @include m.vp-1023 {
     margin: 0 0 2px 2px;
     align-self: flex-end;
+    justify-self: flex-start;
   }
 
   @include m.vp-767 {

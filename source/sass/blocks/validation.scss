@@ -1,0 +1,22 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.is-invalid > input[type="text"],
+.is-invalid > input[type="tel"],
+.is-invalid > input {
+  border-color: v.$color-torch-red;
+}
+
+.is-invalid > span {
+  color: v.$color-torch-red;
+  font-weight: 600;
+}
+
+.is-invalid > .input-message {
+  position: absolute;
+  left: 17px;
+  bottom: -22px;
+  color: v.$color-default-black;
+  font-weight: 400;
+  font-size: 14px;
+}
