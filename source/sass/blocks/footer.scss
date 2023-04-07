@@ -87,9 +87,6 @@
   @include m.vp-767 {
     padding: 0;
     max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: auto;
   }
 }
 
@@ -183,10 +180,9 @@
   transition: opacity v.$trans-default;
 
   @include m.vp-767 {
-    width: 200%;
+    width: 100%;
     cursor: pointer;
-    margin: 0 -100px;
-    padding: 20px 100px 24px;
+    padding: 20px 0 24px;
 
     &::before,
     &::after {
@@ -218,6 +214,12 @@
   }
 }
 
+.is-active {
+  @include m.vp-767 {
+    padding-bottom: 24px;
+  }
+}
+
 .footer__list {
   list-style-type: none;
   padding-left: 0;
@@ -225,7 +227,6 @@
 
   @include m.vp-767 {
     width: 100%;
-    padding-bottom: 20px;
   }
 }
 
