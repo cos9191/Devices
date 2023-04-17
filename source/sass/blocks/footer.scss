@@ -6,46 +6,53 @@
 }
 
 .footer__container {
-  min-height: 280px;
-  color: v.$color-footer-text;
   display: grid;
   grid-template-columns: minmax(10px, 345px) minmax(10px, 470px) minmax(10px, 345px);
   gap: 30px;
   place-content: center;
+
+  min-height: 280px;
   padding-top: 50px;
   padding-bottom: 55px;
 
+  color: v.$color-footer-text;
+
   @include m.vp-1023 {
     grid-template-columns: minmax(10px, 1fr);
-    padding: 50px 6% 50px 6.49%;
     gap: 30px 0;
+
+    padding: 50px 6% 50px 6.49%;
   }
 
   @include m.vp-767 {
     display: flex;
     flex-direction: column;
-    padding: 36px 25px 35px;
     gap: 0;
+
+    padding: 36px 25px 35px;
   }
 }
 
 .footer__column {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
+
   padding-top: 4px;
   padding-left: 0;
   margin: 0;
-  position: relative;
 
   @include m.vp-1023 {
     gap: 20px;
   }
 
   @include m.vp-767 {
-    gap: 0;
     padding: 20px 0;
+
+    gap: 0;
   }
 }
 
@@ -56,25 +63,30 @@
     bottom: 0;
     left: -25px; // container's padding
     right: -25px;
+
     height: 1px;
+
     background-color: v.$color-footer-separator;
   }
 }
 
 .footer__column--socials {
   justify-self: start;
+
   padding-top: 0;
 
   @include m.vp-1023 {
     grid-column: span 2;
-    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    width: 100%;
   }
 
   @include m.vp-767 {
     flex-direction: column;
+
     padding-bottom: 25px;
   }
 }
@@ -93,6 +105,7 @@
 
 .footer__logo-link {
   align-self: center;
+
   transition: opacity v.$trans-default;
 
   @include m.hover {
@@ -101,16 +114,18 @@
 }
 
 .footer__socials-list {
+  list-style-type: none;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-self: flex-start;
   justify-content: center;
-  list-style-type: none;
+  gap: 15px;
 
   padding-left: 10px;
   margin: 29px 0 0;
-  gap: 15px;
+
 
   @include m.vp-1023 {
     padding-top: 5px;
@@ -119,22 +134,27 @@
 
   @include m.vp-767 {
     align-self: center;
+
     padding-top: 15px;
     padding-left: 4px;
   }
 }
 
 .footer__socials-link {
-  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  padding: 5px;
+
   color: v.$color-socials-icon;
+
   transition: color v.$trans-default, opacity v.$trans-default;
 
   @include m.hover {
     opacity: 0.6;
+
     color: v.$color-deep-sky-blue;
   }
 
@@ -147,19 +167,22 @@
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(10px, 1fr);
   gap: 30px;
+
   padding-top: 20px;
   padding-left: 3px;
 
   @include m.vp-1023 {
     grid-template-columns: minmax(10px, 1fr);
     gap: 6px;
+
     padding-top: 0;
     padding-left: 0;
   }
 
   @include m.vp-767 {
-    width: 100%;
     gap: 10px;
+
+    width: 100%;
   }
 }
 
@@ -168,31 +191,37 @@
 }
 
 .footer__column h2 {
-  color: v.$color-default-white;
   font-family: v.$ff-title;
-  font-size: 15px;
-  line-height: 16px;
+  font-size: v.$fz-h2-footer;
+  line-height: v.$lh-h2-footer;
   letter-spacing: 0.05em;
 
   margin: 0;
 
+  color: v.$color-default-white;
+
   user-select: none;
+
   transition: opacity v.$trans-default;
 
   @include m.vp-767 {
     width: 100%;
-    cursor: pointer;
     padding: 20px 0 24px;
+
+    cursor: pointer;
 
     &::before,
     &::after {
-      background-color: v.$color-footer-accordion-button;
       content: "";
       position: absolute;
       right: 8px;
       top: 20px;
+
       width: 1px;
       height: 15px;
+
+      background-color: v.$color-footer-accordion-button;
+
       transition: transform v.$trans-default;
     }
 
@@ -222,6 +251,7 @@
 
 .footer__list {
   list-style-type: none;
+
   padding-left: 0;
   margin: 0;
 
@@ -232,10 +262,11 @@
 
 .footer__list-item {
   @include m.vp-767 {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
   }
 }
 
@@ -249,9 +280,7 @@
 
 .footer__link {
   color: inherit;
-  font-family: v.$ff-text;
-  font-size: 16px;
-  line-height: 20px;
+
   transition: opacity v.$trans-default;
 
   @include m.hover {
@@ -259,8 +288,9 @@
   }
 
   @include m.vp-767 {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: v.$fz-default-mobile;
+    line-height: v.$lh-default;
+
     width: 100%;
   }
 }

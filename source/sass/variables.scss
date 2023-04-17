@@ -35,6 +35,43 @@ $blue-to-bottom:                    linear-gradient(180deg, #041827 84.9%, rgba(
 
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
+$fz-default-tablet:                 $fz-default;
+$fz-default-mobile:                 $fz-default*0.875;
+$lh-default:                        135%;
+
+$fz-text-hero:                      $fz-default*1.375;
+$fz-text-hero-tablet:               $fz-text-hero;
+$fz-text-hero-mobile:               $fz-default-mobile;
+$lh-text-hero:                      $lh-default*1.15;
+
+$fz-text-catalog:                   $fz-default + 4;
+$fz-text-catalog-tablet:            $fz-text-catalog;
+$fz-text-catalog-mobile:            $fz-text-catalog + 2;
+$lh-text-catalog:                   $lh-default - 7;
+$lh-text-catalog-mobile:            $lh-default + 7;
+
+$fz-h1-default:                     80px;
+$fz-h1-tablet:                      $fz-h1-default*0.8;
+$fz-h1-mobile:                      $fz-h1-default*0.45;
+$flh-h1:                            $lh-default - 18;
+
+$fz-h2-default:                     36px;
+$fz-h2-tablet:                      $fz-h2-default;
+$fz-h2-mobile:                      $fz-h2-default*0.8;
+$lh-h2:                             $lh-default + 5;
+$fw-h2:                             400;
+
+$fz-h3-default:                     24px;
+$fz-h3-tablet:                      $fz-h3-default;
+$fz-h3-mobile:                      $fz-h3-default*0.83;
+$lh-h3:                             $lh-default + 5;
+$fw-h3:                             400;
+
+$fz-h2-footer:                     15px;
+$lh-h2-footer:                     16px;
+
+$fz-btn:                           14px;
+$lh-btn:                           117%;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13

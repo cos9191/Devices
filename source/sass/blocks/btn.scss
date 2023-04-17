@@ -2,13 +2,23 @@
 @use "../mixins" as m;
 
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+  padding: 10px 20px;
+
+  font-family: v.$ff-title;
+  font-weight: 700;
+  font-size: v.$fz-btn;
+  line-height: v.$lh-btn;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: v.$color-default-white;
 
-  background-color: v.$color-deep-sky-blue;
+  background-color: v.$color-transparent;
+
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -17,8 +27,12 @@
 
   user-select: none;
 
-  &--red {
-    background-color: v.$color-torch-red;
+  &--black {
+    background-color: v.$color-black-pearl;
+  }
+
+  &--blue {
+    background-color: v.$color-deep-sky-blue;
   }
 
   &:disabled {

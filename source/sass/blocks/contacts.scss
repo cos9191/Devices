@@ -3,19 +3,20 @@
 
 .contacts {
   list-style-type: none;
-  padding: 12px 0 20px;
-  margin: 0;
-
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: flex-start;
   gap: 4px 36px;
 
+  padding: 12px 0 20px;
+  margin: 0;
+
   font-family: v.$ff-text;
 
   @include m.vp-1023 {
     gap: 20px;
+
     padding-top: 0;
   }
 
@@ -31,11 +32,13 @@
   gap: 15px;
 
   a {
-    color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
+
+    color: inherit;
+
     transition: opacity v.$trans-default;
 
     @include m.vp-1023 {
@@ -48,8 +51,9 @@
   }
 
   svg {
-    color: v.$color-deep-sky-blue;
     min-width: 20px;
+
+    color: v.$color-deep-sky-blue;
   }
 
   span {

@@ -7,39 +7,49 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+
   cursor: pointer;
 
   @include m.vp-767 {
-    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    min-width: 100%;
   }
 }
 
 .checkbox input {
   appearance: none;
+
   padding: 0;
   position: relative;
   min-width: 15px;
   max-width: 15px;
   height: 15px;
+
   border: 1px solid v.$color-default-white;
   border-radius: 2px;
+
   cursor: inherit;
+
   transition: opacity v.$trans-default;
+
   background-color: transparent;
 }
 
 .checkbox__input::before {
   position: absolute;
-  border-top: 1px solid v.$color-default-white;
-  border-right: 1px solid v.$color-default-white;
-  width: 6px;
-  height: 4px;
-  transform: rotate(135deg);
   left: 3px;
   top: 3px;
+
+  width: 6px;
+  height: 4px;
+
+  border-top: 1px solid v.$color-default-white;
+  border-right: 1px solid v.$color-default-white;
+
+  transform: rotate(135deg);
 }
 
 .checkbox .checkbox__input:checked::before {
@@ -55,6 +65,8 @@
   font-family: v.$ff-text;
   font-size: 14px;
   line-height: 16px;
+
   opacity: 0.8;
+
   transition: opacity v.$trans-default;
 }

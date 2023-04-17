@@ -93,7 +93,7 @@
         <h1>Печатные платы</h1>
         <p>производство и&nbsp;монтаж, поставка комплектующих,<br> блоков и&nbsp;модулей</p>
         <a
-          class="btn hero__btn"
+          class="btn btn--blue hero__btn"
           href="#form"
           data-hero-btn-text="Получить бесплатную консультацию"
           data-hero-btn-text-mobile="Бесплатная консультация"
@@ -327,23 +327,50 @@
         <form action="https://echo.htmlacademy.ru/" method="post">
           <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
           <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-          <div data-validate-type="text" data-on-input-validate data-required data-message-base="Укажите Ваше имя">
+          <div
+            class="custom-input"
+            data-validate-type="text"
+            data-required data-message-base="Укажите Ваше имя"
+            data-on-input-validate
+          >
             <label class="visually-hidden" for="name">Ваше имя.</label>
-            <input type="text" name="name" id="name" placeholder="Имя" title="Укажите Ваше имя" required>
+            <input
+              type="text" name="name" id="name" placeholder="Имя"
+              title="Укажите Ваше имя" required
+            >
           </div>
-          <div data-validate-type="phone" data-on-input-validate data-required data-message-base="Укажите номер телефона">
+          <div
+            class="custom-input"
+            data-validate-type="phone"
+            data-message-base="Укажите номер телефона"
+            data-on-input-validate
+            data-required
+          >
             <label class="visually-hidden" for="phone-number">Ваш номер телефона.</label>
-            <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" title="Укажите Ваше номер телефона" required>
+            <input
+              type="tel" name="phone-number" id="phone-number" placeholder="Телефон"
+              title="Укажите Ваше номер телефона"
+              required
+            >
           </div>
-          <span class="auto-resize-textarea">
+          <span class="auto-resize-textarea custom-textarea">
             <label class="visually-hidden" for="issue">Ваш вопрос.</label>
             <textarea name="issue" id="issue" placeholder="Ваш вопрос"></textarea>
           </span>
-          <label class="checkbox checkbox--form" for="personal-data" data-validate-type="checkbox" title="Поставьте галочку, юридическая формальность" data-required>
-            <input class="checkbox__input" type="checkbox" id="personal-data" name="personal-data" checked required>
+          <label
+            class="checkbox checkbox--form"
+            for="personal-data"
+            data-validate-type="checkbox"
+            title="Поставьте галочку, юридическая формальность"
+            data-required
+          >
+            <input
+              class="checkbox__input" type="checkbox" id="personal-data"
+              name="personal-data" checked required
+            >
             <span class="checkbox__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
           </label>
-          <button class="btn form__btn" type="submit">ЗАДАТЬ ВОПРОС</button>
+          <button class="btn btn--black form__btn" type="submit">ЗАДАТЬ ВОПРОС</button>
         </form>
       </div>
     </section>

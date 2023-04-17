@@ -2,12 +2,13 @@
 @use "../mixins" as m;
 
 .about__container {
-  padding: 120px 0 100px 0;
-  max-width: 1220px;
-  margin: 0 auto;
   display: grid;
   gap: 100px;
   grid-template-columns: repeat(2, minmax(10px, auto));
+
+  padding: 120px 0 100px 0;
+  max-width: 1220px;
+  margin: 0 auto;
 
   @include m.vp-1023 {
     padding: 80px 50px 80px 46px;
@@ -30,38 +31,38 @@
 
 .about__text h2 {
   margin: 0 0 -10px;
+
   font-family: v.$ff-title;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-weight: v.$fw-h2;
+  font-size: v.$fz-h2-default;
+  line-height: v.$lh-h2;
   color: v.$color-black-pearl;
 
   @include m.vp-1023 {
     margin-bottom: 0;
-    line-height: 39px;
+
+    font-size: v.$fz-h2-tablet;
   }
 
   @include m.vp-767 {
-    font-size: 28px;
+    font-size: v.$fz-h2-mobile;
   }
 }
 
 .about__text p,
 .about__text span {
   margin: 22px 0 0;
-  font-family: v.$ff-text;
-  font-size: 16px;
-  line-height: 22px;
-  color: v.$color-black-pearl;
 
   @include m.vp-1023 {
     margin-top: 18px;
+
+    font-size: v.$fz-default-tablet;
   }
 
   @include m.vp-767 {
     margin-top: 12px;
-    font-size: 14px;
-    line-height: 19px;
+
+    font-size: v.$fz-default-mobile;
   }
 }
 
@@ -73,23 +74,19 @@
   }
 }
 
+.is-active span {
+  display: block;
+}
+
 .about__btn {
   margin: 32px 0 0;
-  background-color: v.$color-transparent;
-  color: v.$color-deep-sky-blue;
-  border: 1px solid v.$color-deep-sky-blue;
-  border-radius: 3px;
-  font-family: v.$ff-title;
-  letter-spacing: 0.05em;
-  font-size: 14px;
-  text-transform: uppercase;
-  line-height: 16px;
-  font-weight: 700;
   min-width: 180px;
   min-height: 45px;
-  display: grid;
-  align-content: center;
-  justify-items: center;
+
+  color: v.$color-deep-sky-blue;
+
+  border: 1px solid v.$color-deep-sky-blue;
+
   transition: opacity v.$trans-default;
 
   @include m.vp-1023 {

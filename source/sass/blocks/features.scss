@@ -15,15 +15,19 @@
 
 .features__list {
   list-style-type: none;
-  padding-left: 0;
-  max-width: 1220px;
-  margin: 0 auto;
+
   display: grid;
   gap: 30px 30px;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
 
+
+  padding-left: 0;
+  max-width: 1220px;
+  margin: 0 auto;
+
   @include m.vp-767 {
     grid-template-columns: minmax(10px, 1fr);
+
     max-width: 595px;
   }
 }
@@ -32,15 +36,20 @@
   min-height: 300px;
   max-width: 595px;
   padding: 40px 35px 45px 42px;
-  user-select: none;
+
   box-shadow: -5px 0 0 v.$color-deep-sky-blue;
+
   border: 1px solid v.$color-features-border;
+
   transition: background-color v.$trans-default,
     border v.$trans-default,
     color v.$trans-default;
 
+  user-select: none;
+
   @include m.hover {
     background-color: v.$color-deep-sky-blue;
+
     border: 1px solid v.$color-deep-sky-blue;
   }
 
@@ -60,39 +69,38 @@
 
   h3 {
     margin: 14px 0 0;
+
     color: v.$color-deep-sky-blue;
     font-family: v.$ff-title;
-    font-size: 24px;
-    line-height: 34px;
-    font-weight: 400;
+    font-size: v.$fz-h3-default;
+    line-height: v.$lh-h3;
+    font-weight: v.$fw-h3;
 
     @include m.vp-1023 {
-      line-height: 30px;
       margin-top: 10px;
+
+      font-size: v.$fz-h3-tablet;
     }
 
     @include m.vp-767 {
-      font-size: 20px;
-      line-height: 28px;
       margin-top: 4px;
+
+      font-size: v.$fz-h3-mobile;
     }
   }
 
   p {
     margin: 14px 0 0;
-    color: v.$color-black-pearl;
-    font-family: v.$ff-text;
-    font-size: 16px;
-    line-height: 22px;
 
     @include m.vp-1023 {
       margin-top: 8px;
+
+      font-size: v.$fz-default-tablet;
     }
 
 
     @include m.vp-767 {
-      font-size: 14px;
-      line-height: 19px;
+      font-size: v.$fz-default-mobile;
     }
   }
 }
