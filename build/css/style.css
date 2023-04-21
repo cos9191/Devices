@@ -1222,7 +1222,7 @@ textarea::placeholder {
 }
 .hero__text-wrapper > p {
   margin: 0;
-  font-size: 22px;
+  font-size: 22.08px;
   line-height: 155.25%;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1231,12 +1231,12 @@ textarea::placeholder {
 }
 @media (max-width: 1023px) {
   .hero__text-wrapper > p {
-    font-size: 22px;
+    font-size: 22.08px;
   }
 }
 @media (max-width: 767px) {
   .hero__text-wrapper > p {
-    font-size: 14px;
+    font-size: 14.08px;
   }
 }
 @media (max-width: 1024px) {
@@ -1390,7 +1390,7 @@ textarea::placeholder {
 }
 @media (max-width: 767px) {
   .features__item p {
-    font-size: 14px;
+    font-size: 14.08px;
   }
 }
 
@@ -1466,7 +1466,7 @@ textarea::placeholder {
   .about__text p,
 .about__text span {
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 14.08px;
   }
 }
 
@@ -1831,7 +1831,7 @@ h2[data-catalog-title-text]::after {
     -ms-grid-column-span: 1;
     grid-column: span 1;
     margin: -10px 0 11px;
-    font-size: 14px;
+    font-size: 14.08px;
   }
 }
 
@@ -2222,7 +2222,7 @@ h2[data-catalog-title-text]::after {
 }
 @media (max-width: 767px) {
   .footer__link {
-    font-size: 14px;
+    font-size: 14.08px;
     line-height: 135%;
     width: 100%;
   }
